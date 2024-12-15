@@ -1,3 +1,5 @@
+Import-Module SqlServer
+
 # Change directory into the default instance of SQL Server.
 cd SQLSERVER:\SQL\DESKTOP-3GIU7MF\SQLEXPRESS
 
