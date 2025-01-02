@@ -8,14 +8,14 @@ EXEC dbo.InsertSubscription
 
 SELECT * FROM dbo.Subscription;
 
-DECLARE @CustomerId INT = 16;
+DECLARE @CustomerId INT = 18;
 
 EXEC dbo.SelectCustomerById @CustomerId = @CustomerId;
 
 SELECT sub.Id AS 'SubscriptionId', cust.CompanyName, cust.BusinessContact, serv.Name AS 'ServiceName', serv.Price, sub.CreatedDateTime
-FROM Subscription sub
-JOIN Customer cust
+FROM dbo.Subscription sub
+JOIN dbo.Customer cust
 ON cust.Id = sub.CustomerId
-JOIN Service serv
+JOIN dbo.Service serv
 ON serv.Id = sub.ServiceId
 WHERE sub.CustomerId = @CustomerId;
