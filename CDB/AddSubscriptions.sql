@@ -2,7 +2,7 @@ SELECT * FROM dbo.Customer
 SELECT * FROM dbo.Service
 SELECT * FROM dbo.Subscription;
 
-EXEC dbo.InsertSubscription
+EXECUTE dbo.InsertSubscription
 	@CustomerId = 20,
 	@ServiceId = 8;
 
